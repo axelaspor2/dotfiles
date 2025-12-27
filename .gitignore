@@ -3,19 +3,29 @@
 .AppleDouble
 .LSOverride
 
+# Fish shell (plugin files - managed by fisher)
+.config/fish/functions/__fl*.fish
+.config/fish/functions/__fishline*.fish
+.config/fish/functions/fisher.fish
+.config/fish/functions/fishline.fish
+.config/fish/functions/fish_prompt.fish
+.config/fish/completions/
+.config/fish/conf.d/fishline*
+.config/fish/conf.d/autols.fish
+.config/fish/themes/
+.config/fish/fish_variables
+.config/fish/ghostty_logo.txt
+
+# Ghostty animation frames (too many files)
+.config/ghostty/animation_frames/
+
+# Neovim (plugin-generated)
+.config/nvim/lazy-lock.json
+
 # Backup files
 *.bak
 *.backup
 *~
-
-# Fish shell (environment-specific)
-config/fish/fish_variables
-
-# Ghostty animation frames (too many files)
-config/ghostty/animation_frames/
-
-# Neovim (plugin-generated)
-config/nvim/lazy-lock.json
 
 # Secrets (should never be committed)
 .env
