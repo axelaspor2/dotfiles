@@ -1,0 +1,23 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Fish shell (environment-specific)
+config/fish/fish_variables
+
+# Ghostty animation frames (too many files)
+config/ghostty/animation_frames/
+
+# Neovim (plugin-generated)
+config/nvim/lazy-lock.json
+
+# Secrets (should never be committed)
+.env
+*.pem
+*.key

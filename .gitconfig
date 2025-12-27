@@ -1,0 +1,8 @@
+[commit]
+	gpgsign = true
+[user]
+	signingkey = 58EC4CF7E2423D2A
+	email = cheichey.1223@gmail.com
+	name = axelaspor2
+[push]
+	default = current
