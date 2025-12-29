@@ -4,6 +4,11 @@
 FRAMES_DIR="$HOME/.config/ghostty/animation_frames"
 FRAME_DELAY=0.031
 
+# フレームディレクトリが存在しない場合は終了
+if [ ! -d "$FRAMES_DIR" ] || [ -z "$(ls -A "$FRAMES_DIR" 2>/dev/null)" ]; then
+    exit 0
+fi
+
 FRAME_WIDTH=100
 FRAME_HEIGHT=41
 

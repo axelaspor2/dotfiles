@@ -6,3 +6,5 @@
 	name = axelaspor2
 [push]
 	default = current
+[ghq]
+	root = ~/dev/ghq

@@ -1,28 +1,66 @@
 {
   "model": "opus",
   "hooks": {
-    "SessionEnd": [
+    "Notification": [
       {
         "matcher": "*",
         "hooks": [
           {
             "type": "command",
-            "command": "say 終わったよ"
+            "command": "osascript -e 'display notification \"Claude Codeが許可を求めています\" with title \"Claude Code\" subtitle \"確認待ち\" sound name \"Glass\"'"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"タスクが完了しました\" with title \"Claude Code\" subtitle \"処理終了\" sound name \"Hero\"'"
           }
         ]
       }
     ]
   },
+  "permissions": {
+    "allow": [
+      "Bash(npm:*)",
+      "Bash(git:*)",
+      "Bash(cargo:*)",
+      "Read(**)",
+      "Edit(./**)",
+      "WebFetch(domain:*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm -rf:*)",
+      "Bash(git push:*)",
+      "Read(.env.*)",
+      "Read(id_rsa)",
+      "Read(id_ed25519)",
+      "Read(**/*token*)",
+      "Read(**/*key*)",
+      "Write(.env*)",
+      "Write(**/secrets/**)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(nc:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm remove:*)",
+      "Bash(psql:*)"
+    ]
+  },
   "statusLine": {
-	"type": "command",
-	"command": "bun x ccusage statusline",
-	"padding": 0
+    "type": "command",
+    "command": "bun x ccusage statusline",
+    "padding": 0
   },
   "enabledPlugins": {
     "example-skills@anthropic-agent-skills": true,
     "frontend-design@claude-code-plugins": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true
-  },
-  "alwaysThinkingEnabled": true
+  }
 }
