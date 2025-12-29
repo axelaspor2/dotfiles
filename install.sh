@@ -47,6 +47,7 @@ echo ""
 log_info "Installing home directory dotfiles..."
 symlink "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 symlink "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+symlink "$DOTFILES_DIR/.claude" "$HOME/.claude"
 
 # XDG Config directory
 log_info "Installing .config directory dotfiles..."

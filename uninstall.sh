@@ -33,6 +33,7 @@ echo ""
 log_info "Removing home directory dotfiles..."
 remove_symlink "$HOME/.zshrc"
 remove_symlink "$HOME/.gitconfig"
+remove_symlink "$HOME/.claude"
 
 # XDG Config directory
 log_info "Removing .config directory dotfiles..."
