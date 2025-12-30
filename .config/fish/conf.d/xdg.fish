@@ -30,6 +30,7 @@ set -gx RUSTUP_HOME "$XDG_DATA_HOME/rustup"
 # ─────────────────────────────────────────────────────────────────
 set -gx NPM_CONFIG_CACHE "$XDG_CACHE_HOME/npm"
 set -gx NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME/npm/npmrc"
+set -gx NPM_CONFIG_PREFIX "$XDG_DATA_HOME/npm"
 set -gx NODE_REPL_HISTORY "$XDG_STATE_HOME/node/repl_history"
 set -gx BUN_INSTALL "$XDG_DATA_HOME/bun"
 mkdir -p (dirname $NODE_REPL_HISTORY)
@@ -40,9 +41,9 @@ mkdir -p (dirname $NODE_REPL_HISTORY)
 set -gx DOCKER_CONFIG "$XDG_CONFIG_HOME/docker"
 
 # ─────────────────────────────────────────────────────────────────
-# GnuPG
+# GnuPG - セキュリティ上の理由により移行しない
 # ─────────────────────────────────────────────────────────────────
-set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
+# set -gx GNUPGHOME "$XDG_DATA_HOME/gnupg"
 
 # ─────────────────────────────────────────────────────────────────
 # Go

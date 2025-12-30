@@ -3,7 +3,7 @@
   "hooks": {
     "Notification": [
       {
-        "matcher": "*",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
@@ -14,7 +14,7 @@
     ],
     "Stop": [
       {
-        "matcher": "*",
+        "matcher": "Bash",
         "hooks": [
           {
             "type": "command",
@@ -27,11 +27,14 @@
   "permissions": {
     "allow": [
       "Bash(npm:*)",
+      "Bash(cat:*)",
       "Bash(git:*)",
       "Bash(cargo:*)",
       "Read(**)",
       "Edit(./**)",
-      "WebFetch(domain:*)"
+      "WebFetch(domain:*)",
+      "Bash(gh run view:*)",
+      "Skill(**)"
     ],
     "deny": [
       "Bash(sudo:*)",
